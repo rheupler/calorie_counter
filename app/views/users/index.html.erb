@@ -1,0 +1,15 @@
+
+<% if user_signed_in? %>
+<h1><%= current_user.name %></h1>
+<%= render 'form' %>
+
+<div class="col-md-6">
+  <h2>Food</h2>
+</div>
+<div class="col-md-6">
+  <h2>Exercise</h2>
+</div>
+
+<% else %>
+  <h1>Welcome to TYO. Track yo health. You can log calories, your exercises. </h1>
+<% end %>
