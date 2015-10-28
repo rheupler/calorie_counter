@@ -1,9 +1,9 @@
 <br>
 <%= form_for [current_user, @food] do |f| %>
   <%= f.label "Name" %>
-  <%= f.text_field :type, class: 'form-control' %>
+  <%= f.text_field :name, class: 'form-control' %>
   <br>
   <%= f.label "Calories" %>
-  <%= f.text_field :type, class: 'form-control' %>
+  <%= f.text_field :calories, class: 'form-control' %>
   <button type="submit" class="btn btn-xs btn-success">Submit</button>
 <% end %>

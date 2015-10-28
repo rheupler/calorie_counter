@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @food = Food.new
+    @foods = Food.all
   end
 
   def new
