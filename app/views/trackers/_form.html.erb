@@ -1,0 +1,8 @@
+<br>
+<%= form_for @tracker do |f| %>
+<%= f.label "Make a new post" %>
+<%= f.text_field :name, class: 'form-control' %>
+<br>
+
+<button type="submit" class="btn btn-xs btn-success">Submit</button>
+<% end %>

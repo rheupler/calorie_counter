@@ -1,6 +1,7 @@
-class TrackerController < ApplicationController
+class TrackersController < ApplicationController
   def index
-    
+    @tracker = Tracker.new
+    @trackers = Tracker.all
   end
 
   def new
@@ -19,10 +20,10 @@ class TrackerController < ApplicationController
   end
 
   def create
-    @tracker = Tracker.new(sign_up_params)
+    @tracker = Tracker.new(tracker_params)
     if @tracker.save
       flash[:notice] = "Tracker added!"
-      redirect_to users_path
+      redirect_to root_path
     else
       render :index
     end
@@ -43,7 +44,7 @@ class TrackerController < ApplicationController
 
 
   private
-  def sign_up_params
-    params.require(:tracker).permit(:email, :password, :password_confirmation)
+  def tracker_params
+    params.require(:tracker).permit(:name)
   end
 end

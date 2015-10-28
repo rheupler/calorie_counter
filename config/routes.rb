@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :users do
-    resources :food
-    resources :exercise
+  resources :trackers do
+    resources :foods
+    resources :exercises
   end
 
-  root 'tracker#index'
+  root 'trackers#index'
 end
