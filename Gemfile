@@ -7,6 +7,9 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem "devise"
+gem 'bootstrap-sass', '~> 3.3.5'
+
 
 group :development do
   gem 'byebug'
@@ -23,4 +26,5 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
 end
